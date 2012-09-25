@@ -1,0 +1,6 @@
+%li{:class => "#{'completed' if @completed}"}
+  .view
+    %input.toggle{ :type => "checkbox", :checked => "#{'checked' if @completed}"}
+    %label= @title
+    %button.destroy
+  %input.edit{:value => @title}
