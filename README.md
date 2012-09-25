@@ -1,11 +1,5 @@
-# Example apps in Spar
+# Spar Examples
+Welcome to Spar Examples! You will find several sample applications riding on top of [Spar](http://boundlesslearning.github.com/spar). Straight to the moon!
 
-For more info checkout http://boundlesslearning.github.com/spar
-
-## my-app
-
-A basic app with jQuery, Backbone & Twitter Bootstrap
-
-## todo
-
-A todo list app adapted from the amazing [todomvc](http://addyosmani.github.com/todomvc/) project for Spar.
+## Spine TODO
+Spar favors CoffeeScript, so here is the TODO MVC app using Spine.js, built on top of Spar. We've also included Haml-Coffee for fat templating feast.
