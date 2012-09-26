@@ -18,9 +18,22 @@ class window.Todos extends Spine.Controller
 
 	render: =>
 		@replace @view('todo_item', @todo)
-		console.log @todo
 		this
 
+	###
+	  view
+	
+	  HAML rendering method to allow HAML instead of Handlebars
+	  changed for Spar as we prefer coffee-haml
+	
+	  parameters:
+	    name - string; name of the template file, name.hamlc
+			context - Object; 'this' in the template will refer to the context object
+
+	  returns:
+	  	if a template exists, returns the template method loaded with the context object
+	    
+	###
 	view: (name, context = {}) ->
     template = HAML["views/#{name}"]
     if template?
