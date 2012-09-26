@@ -10,4 +10,42 @@
 #= require jquery/jquery
 #= require underscore/underscore
 #= require backbone/backbone
+#= require bootstrap/docs/assets/js/bootstrap
 #= require_tree .
+
+class MyRouter extends Backbone.Router
+  routes:
+    "": "init"
+    "home": "home"
+    "about": "about"
+
+  init: ->
+    @navigate('home',true)
+
+  home: ->
+    $.get('/home.html', (data) ->
+      $('#content').html(data)
+      $('#home-trigger').parent().siblings().removeClass 'active'
+      $('#home-trigger').parent().addClass('active')
+    )
+
+  about: ->
+    $.get('/about.html', (data) ->
+      $('#content').html(data)
+      $('#about-trigger').parent().siblings().removeClass 'active'
+      $('#about-trigger').parent().addClass('active')
+    )
+
+$ ->
+
+  App = new MyRouter()
+  Backbone.history.start()
+
+
+  $('#home-trigger,#about-trigger').click (e) ->
+    e.preventDefault()
+
+  $('#home-trigger').click ->
+    App.navigate('home', true)
+  $('#about-trigger').click ->
+    App.navigate('about', true)

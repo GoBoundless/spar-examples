@@ -1,12 +1,33 @@
-!!! Strict
+!!!
 %html
   %head
     %title Spar App
     [{ stylesheet_link_tag(application) }]
   %body
-    %h1
-      Nice app!
-    %h2
-      Point LiveReload to the directory of this project if you want to use it. No extensions or JS required.
-    [{ javascript_include_tag(application) }]
+    .container
+      .hero-unit
+        %h1
+          What A Cool App
+      .navbar
+        .navbar-inner
+          %ul.nav
+            %li <a href="#home" id="home-trigger">Home</a>
+            %li <a href="#about" id="about-trigger">About</a>
+      .row
+        .span8#content
 
+      .row
+        .errata.span6
+          %h3
+            More Spar
+          %p 
+            <a href="http://github.com/GoBoundless/spar" class="btn">Spar Home</a> 
+            <a href="http://github.com/GoBoundless/spar" class="btn">Spar on Github</a>
+            <a href="http://github.com/GoBoundless/spar-examples" class="btn">Spar Examples on Github</a>
+          %h4
+            <3
+            %br
+            Team Boundless
+
+          
+    [{ javascript_include_tag(application) }]
