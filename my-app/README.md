@@ -1,5 +1,8 @@
-# Spar App Example
+# Simple Backbone App
 
-Here's how to get an app up and running with some of our favorite tools: jQuery, Twitter Bootstrap & Backbone
+An app that uses jQuery, Backbone, and Twitter Bootstrap.
+
+    cd path/to/my-app
+    spar server
 
     
