@@ -23,7 +23,7 @@ class window.Todos extends Spine.Controller
 	###
 	  view
 	
-	  HAML rendering method to allow HAML instead of Handlebars
+	  Haml rendering method to allow Haml instead of Handlebars
 	  changed for Spar as we prefer coffee-haml
 	
 	  parameters:
