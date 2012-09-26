@@ -17,7 +17,7 @@ class window.Todos extends Spine.Controller
 		@todo.bind 'destroy', @release
 
 	render: =>
-		@replace @view('todo_template', @todo)
+		@replace @view('todo_item', @todo)
 		
 		this
 

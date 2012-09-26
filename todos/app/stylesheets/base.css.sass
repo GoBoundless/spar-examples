@@ -11,11 +11,7 @@ button
   vertical-align: baseline
   font-family: inherit
   color: inherit
-  -webkit-appearance: none
-  /*-moz-appearance: none;
-  -ms-appearance: none
-  -o-appearance: none
-  appearance: none
+  +appearance(none)
 
 body
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif
@@ -36,9 +32,8 @@ body
   margin: 130px 0 40px 0
   border: 1px solid #ccc
   position: relative
-  border-top-left-radius: 2px
-  border-top-right-radius: 2px
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.15)
+  +border-top-radius(2px)
+  +box-shadow(0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.15))
   &:before
     content: ''
     border-left: 1px solid #f5d6d6
@@ -63,7 +58,7 @@ body
     text-align: center
     color: #b3b3b3
     color: rgba(255, 255, 255, 0.3)
-    text-shadow: -1px -1px rgba(0, 0, 0, 0.2)
+    +text-shadow(-1px -1px rgba(0, 0, 0, 0.2))
     -webkit-text-rendering: optimizeLegibility
     -moz-text-rendering: optimizeLegibility
     -ms-text-rendering: optimizeLegibility
@@ -90,8 +85,7 @@ body
     background: -ms-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8))
     background: linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8))
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9d8b83', EndColorStr='#847670')
-    border-top-left-radius: 1px
-    border-top-right-radius: 1px
+    +border-top-radius(1px)
 
 #new-todo, .edit
   position: relative
@@ -105,12 +99,8 @@ body
   color: inherit
   padding: 6px
   border: 1px solid #999
-  box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2)
-  -webkit-box-sizing: border-box
-  -moz-box-sizing: border-box
-  -ms-box-sizing: border-box
-  -o-box-sizing: border-box
-  box-sizing: border-box
+  +box-shadow(inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2))
+  +box-sizing(border-box)
   -webkit-font-smoothing: antialiased
   -moz-font-smoothing: antialiased
   -ms-font-smoothing: antialiased
@@ -122,7 +112,7 @@ body
   border: none
   background: rgba(0, 0, 0, 0.02)
   z-index: 2
-  box-shadow: none
+  +box-shadow(none)
 
 #main
   position: relative
@@ -140,17 +130,8 @@ label[for='toggle-all']
   height: 41px
   text-align: center
   border: none
-  /* Mobile Safari
-  -webkit-appearance: none
-  /*-moz-appearance: none;
-  -ms-appearance: none
-  -o-appearance: none
-  appearance: none
-  -webkit-transform: rotate(90deg)
-  /*-moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg)
-  /*-o-transform: rotate(90deg);
-  transform: rotate(90deg)
+  +appearance(none)
+  +rotate(90deg)
   &:before
     content: '»'
     font-size: 28px
@@ -232,18 +213,10 @@ label[for='toggle-all']
       margin: auto 0
       font-size: 22px
       color: #a88a8a
-      -webkit-transition: all 0.2s
-      -moz-transition: all 0.2s
-      -ms-transition: all 0.2s
-      -o-transition: all 0.2s
-      transition: all 0.2s
+      +transition(all 0.2s)
       &:hover
         text-shadow: 0 0 1px black, 0 0 10px rgba(199, 107, 107, 0.8)
-        -webkit-transform: scale(1.3)
-        -moz-transform: scale(1.3)
-        -ms-transform: scale(1.3)
-        -o-transform: scale(1.3)
-        transform: scale(1.3)
+        +scale(1.3)
       &:after
         content: '✖'
     &:hover .destroy
@@ -271,7 +244,7 @@ label[for='toggle-all']
     left: 0
     height: 50px
     z-index: -1
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 6px 0 -3px rgba(255, 255, 255, 0.8), 0 7px 1px -3px rgba(0, 0, 0, 0.3), 0 43px 0 -6px rgba(255, 255, 255, 0.8), 0 44px 2px -6px rgba(0, 0, 0, 0.2)
+    +box-shadow(0 1px 1px rgba(0, 0, 0, 0.3), 0 6px 0 -3px rgba(255, 255, 255, 0.8), 0 7px 1px -3px rgba(0, 0, 0, 0.3), 0 43px 0 -6px rgba(255, 255, 255, 0.8), 0 44px 2px -6px rgba(0, 0, 0, 0.2))
 
 #todo-count
   float: left
@@ -302,16 +275,16 @@ label[for='toggle-all']
   font-size: 11px
   padding: 0 10px
   border-radius: 3px
-  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.2)
+  +box-shadow(0 -1px 0 0 rgba(0, 0, 0, 0.2))
   &:hover
     background: rgba(0, 0, 0, 0.15)
-    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.3)
+    +box-shadow(0 -1px 0 0 rgba(0, 0, 0, 0.3))
 
 #info
   margin: 65px auto 0
   color: #a6a6a6
   font-size: 12px
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7)
+  +text-shadow(0 1px 0 rgba(255, 255, 255, 0.7))
   text-align: center
   a
     color: inherit

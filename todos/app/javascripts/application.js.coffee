@@ -7,10 +7,11 @@
 # It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 # the compiled file.
 
-# From vendor/assets
-#= require jquery.min
+# Note: hamlcoffee is included in Spar. We love haml coffeescript/haml template (and we thing you should too)
 #= require hamlcoffee
 
+# From vendor/assets
+#= require jquery.min
 #= require spine
 #= require route.min
 #= require local
@@ -18,6 +19,5 @@
 #= require_tree ./controllers
 #= require_tree ./models
 #= require_tree ./views
-
 
 #= require app 
