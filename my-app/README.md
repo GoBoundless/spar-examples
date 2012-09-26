@@ -2,7 +2,7 @@
 
 An app that uses jQuery, Backbone, and Twitter Bootstrap.
 
-   cd path/to/my-app
-   spar server
+    cd path/to/my-app
+    spar server
 
     
