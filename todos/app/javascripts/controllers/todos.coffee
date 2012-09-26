@@ -18,7 +18,7 @@ class window.Todos extends Spine.Controller
 
 	render: =>
 		@replace @view('todo_item', @todo)
-		
+		console.log @todo
 		this
 
 	view: (name, context = {}) ->
